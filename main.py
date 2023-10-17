@@ -18,6 +18,8 @@ with open("test.txt", "r", encoding="utf-8") as file:
     print(file.read())
 
 with open("некийтекстовый файл.txt", "r", encoding="utf-8") as file:
+    print(file.read())
+    file.seek(0)
     array = file.read()
     array = list(filter(lambda x: str.isdigit(x), array))
     print(array)
